@@ -18,5 +18,9 @@ Rails.application.routes.draw do
   # DELETE
   delete("/movies/:id", { controller: "movies", action: "destroy" })
 
+  root "movies#index"
+  resources :movies  # or individual route definitions
+  
   #------------------------------
 end
+
